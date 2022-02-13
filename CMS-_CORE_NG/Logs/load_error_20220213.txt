@@ -1,0 +1,168 @@
+--------------------------------------------------------
+Timestamp - 02/13/2022 19:32:51 +01:00 | Level - Error|
+--------------------------------------------------------
+Error : "Attempted to divide by zero."
+StackTrace : "   at CMS__CORE_NG.Program.Main(String[] args) in /Users/addehblaise/Documents/ProjetsAngular/AngOnzeApp/CMS-_CORE_NG/CMS-_CORE_NG/Program.cs:line 29"
+InnerException : null
+Source : "CMS-_CORE_NG"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.13"
+UserName : "addehblaise"
+ProcessId : 10332
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 02/13/2022 19:32:55 +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.13"
+UserName : "addehblaise"
+ProcessId : 10332
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 02/13/2022 19:33:03 +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.13"
+UserName : "addehblaise"
+ProcessId : 10332
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 2/13/2022 7:45:04 PM +01:00 | Level - Error|
+--------------------------------------------------------
+Error : "Attempted to divide by zero."
+StackTrace : "   at CMS__CORE_NG.Program.Main(String[] args) in /Users/addehblaise/Documents/ProjetsAngular/AngOnzeApp/CMS-_CORE_NG/CMS-_CORE_NG/Program.cs:line 29"
+InnerException : null
+Source : "CMS-_CORE_NG"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.13"
+UserName : "addehblaise"
+ProcessId : 10395
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 2/13/2022 7:45:08 PM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.13"
+UserName : "addehblaise"
+ProcessId : 10395
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 2/13/2022 7:45:16 PM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.13"
+UserName : "addehblaise"
+ProcessId : 10395
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 2/13/2022 7:57:44 PM +01:00 | Level - Error|
+--------------------------------------------------------
+Error : "Attempted to divide by zero."
+StackTrace : "   at CMS__CORE_NG.Program.Main(String[] args) in /Users/addehblaise/Documents/ProjetsAngular/AngOnzeApp/CMS-_CORE_NG/CMS-_CORE_NG/Program.cs:line 29"
+InnerException : null
+Source : "CMS-_CORE_NG"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.13"
+UserName : "addehblaise"
+ProcessId : 10463
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 2/13/2022 7:57:48 PM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.13"
+UserName : "addehblaise"
+ProcessId : 10463
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 2/13/2022 7:57:56 PM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.13"
+UserName : "addehblaise"
+ProcessId : 10463
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 2/13/2022 8:00:49 PM +01:00 | Level - Error|
+--------------------------------------------------------
+Error : "Attempted to divide by zero."
+StackTrace : "   at CMS__CORE_NG.Program.Main(String[] args) in /Users/addehblaise/Documents/ProjetsAngular/AngOnzeApp/CMS-_CORE_NG/CMS-_CORE_NG/Program.cs:line 29"
+InnerException : null
+Source : "CMS-_CORE_NG"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.13"
+UserName : "addehblaise"
+ProcessId : 10488
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 2/13/2022 8:00:53 PM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.13"
+UserName : "addehblaise"
+ProcessId : 10488
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 2/13/2022 8:01:00 PM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.13"
+UserName : "addehblaise"
+ProcessId : 10488
+ProcessName : "dotnet"
+--------------------------------------------------------

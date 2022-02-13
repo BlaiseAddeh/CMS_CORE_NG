@@ -13,3 +13,53 @@ or push an existing repository from the command line
 git remote add origin https://github.com/BlaiseAddeh/CMS_CORE_NG.git
 git branch -M main
 git push -u origin main
+
+
+======== Application
+git init
+git add CMS-_CORE_NG/*
+git status
+git commit -m "Initial commit"
+
+git remote add origin https://github.com/BlaiseAddeh/CMS_CORE_NG.git
+git branch -M main
+git push -u origin main
+
+
+========== NOTE FOR GIT ========
+git branch.  ——> permet de lister toutes mes branches  
+
+Creation de nouvelle branche
+git branch dev  ———> Creation de la branch dev
+
+Basculer sur la branche dev
+git checkout dev
+
+NB: Dans la branche dev, on retrouve les memes fichiers présents dans la branche à partir de laquelle la branche dev a été créée.
+
+Supprimer une branche
+git branch -D dev
+
+Créer et basculer directement sur une branche:
+git checkout -b dev 
+
+Si dans la branch on a créé des fichiers  supplémentaires, après avoir faire leurs commit, tant que le merge n’a pas été fait, ils ne seront pas visibles au niveau de la master.
+
+Git merge main
+
+*****CHAP I ********* Implementing Logging Service with SeriLog Library ****************
+
+LoggingService doit être ajouter comme reference  dans
+le projet CMS-_CORE_NG
+
+> dotnet add package Serilog.Sinks.File
+> dotnet add package Serilog.Sinks.Console
+> dotnet add package Serilog.Settings.Configuration
+> dotnet add package Serilog.Sinks.Async
+
+
+
+
+
+
+
