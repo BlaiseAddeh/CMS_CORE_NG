@@ -57,6 +57,32 @@ le projet CMS-_CORE_NG
 > dotnet add package Serilog.Settings.Configuration
 > dotnet add package Serilog.Sinks.Async
 
+*****CHAP II ******* Create database with EntityFrameworkCore
+
+** Dans le projet DataService
+
+> dotnet add package Microsoft.AspNetCore.DataProtection.EntityFrameworkCore --version=5.0.1
+> dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version=5.0.1
+> dotnet add package Microsoft.EntityFrameworkCore.Design --version=5.0.1
+> dotnet add package Microsoft.EntityFrameworkCore.Tools --version=5.0.1
+
+** Dans le projet ModelService
+
+> dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version=5.0.1
+
+
+** Projet FunctionalSvc
+
+Il faut installer la meme version de Identity.EntityFrameworkCore que dans le ModelService
+
+> dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version=5.0.1
+
+
+
+
+
+
+
 
 
 
