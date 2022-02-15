@@ -1,0 +1,32 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>CMS Application</title>
+    <meta name="description" content="CMS Application build with Angular 12 and ASP.NET Core 5" />
+    <meta name="author" content="Techhowdy" />
+    <!-- Favicon icon -->
+    <link href="~/favicon.ico" icon="icon" />
+    @RenderSection("Styles", required: false)
+</head>
+<body>
+
+    <!-- ================================================== -->
+    <!-- Main wrapper -->
+    <!-- ================================================== -->
+
+    <div class="wrapper">
+        <div id="content">
+            @RenderBody()
+        </div>
+
+        @await Html.PartialAsync("_FooterLayout")
+
+    </div>
+
+    @RenderSection("Scripts", required: false)
+
+
+</body>
+</html>

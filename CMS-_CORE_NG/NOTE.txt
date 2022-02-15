@@ -159,6 +159,51 @@ NB: Les 02 Scripts ci dessus crée les dossier de migration mais pas les bases d
 Pour generer les bases de données, il faut exécuter l'application
 
 
+** Creating Admin Area and Implement Area Routing
+
+Dans le projet WabApi (CMS-_CORE_NG)
+ > Create new Folder and renamme it to Areas
+ > Create sub Folder Admin in Areas
+ > In Admin, Create 02 folders "Controllers" and "Views"
+ > In Views, create theses sub folders:
+   Account - EmailSettings - Home - Profile - Shared - SiteSettings - User - UserRole
+
+On  creera des page razor extension cshtml
+
+_ViewStart.cshtml permettra de spécifier la vue partagé par toutes les vues utilisant _ViewStart.cshtml
+
+_AdminLayout.cshtml est créé dans le dossier Shared.
+le _ montre que la vue est une vue partielle. Et montre que la vue n'a pas de controller
+
+
+NB: Configuration de la route des controller se trouvant dans le Areas
+  Se fait dans le fichier Startup.cs
+
+ app.UseEndpoints(endpoints =>
+    {
+      endpoints.MapControllerRoute(
+         name: "areas",
+         pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+         );
+
+       ......
+    });
+
+NB: Pour que les modifications dans le cshtml soit automatiquement detectées, il faut installer le nuget suivant:
+
+> dotnet add package Microsoft.AspnetCore.Mvc.Razor.RuntimeCompilation --version=5.0.1
+
+NB: Dans Startup.cs
+
+ /*--Permet de faire des modification et de les visualiser par simple rafraichissement de la page sans redémarrer l'application-*/
+
+ services.AddMvc().AddControllersAsServices()
+        .AddRazorRuntimeCompilation()
+        .SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
+
+
+
+ 
 
 
 

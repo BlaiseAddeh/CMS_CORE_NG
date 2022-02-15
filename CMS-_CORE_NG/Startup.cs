@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
@@ -87,6 +88,11 @@ namespace CMS__CORE_NG
 
             }).AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
+            /*--Permet de faire des modification et de les visualiser par simple rafraichissement de la page sans redémarrer l'application-*/
+
+            services.AddMvc().AddControllersAsServices()
+                   .AddRazorRuntimeCompilation()
+                   .SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
         }
 
@@ -115,6 +121,12 @@ namespace CMS__CORE_NG
 
             app.UseEndpoints(endpoints =>
             {
+
+                endpoints.MapControllerRoute(
+                    name: "areas",
+                    pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+                    );
+
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller}/{action=Index}/{id?}");
