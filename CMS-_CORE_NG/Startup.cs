@@ -1,10 +1,16 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System;
+using DataService;
+using FunctionalService;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using ModelService;
 
 namespace CMS__CORE_NG
 {
@@ -26,6 +32,62 @@ namespace CMS__CORE_NG
             {
                 configuration.RootPath = "ClientApp/dist";
             });
+
+
+            /*--------------------------------------------------------*/
+            /*               DB CONNECTION OPTIONS                    */
+            /*--------------------------------------------------------*/
+
+            services.AddDbContext<ApplicationDbContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("CmsCorNg_DEV"),
+            x => x.MigrationsAssembly("CMS-_CORE_NG") // Le nom du projet auquel appartient la migration
+            ));
+
+            services.AddDbContext<DataProtectionKeysContext>(options =>
+            options.UseSqlServer(Configuration.GetConnectionString("DataProtectionKeysContext"),
+            x => x.MigrationsAssembly("CMS-_CORE_NG")
+            ));
+
+            /*--------------------------------------------------------*/
+            /*                   Functional Service                   */
+            /*--------------------------------------------------------*/
+
+            services.AddTransient<IFunctionalSvc, FunctionalSvc>(); //AddTransient : A chaque requete il y a une initialisation d'un nvel objet
+            services.Configure<AdminUserOptions>(Configuration.GetSection("AdminUserOptions"));
+            services.Configure<AppUserOptions>(Configuration.GetSection("AppUserOptions"));
+
+            /*--------------------------------------------------------*/
+            /*                   Default Identity Options             */
+            /*--------------------------------------------------------*/
+
+            var identityDefaultOptionsConfiguration = Configuration.GetSection("IdentityDefaultOptions");
+            services.Configure<IdentityDefaultOptions>(identityDefaultOptionsConfiguration);
+            var identityDefaultOptions = identityDefaultOptionsConfiguration.Get<IdentityDefaultOptions>();
+
+            services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+            {
+                // Password settings
+                options.Password.RequireDigit = identityDefaultOptions.PasswordRequireDigit;
+                options.Password.RequiredLength = identityDefaultOptions.PasswordRequiredLength;
+                options.Password.RequireNonAlphanumeric = identityDefaultOptions.PasswordRequireNonAlphanumeric;
+                options.Password.RequireUppercase = identityDefaultOptions.PasswordRequireUppercase;
+                options.Password.RequireLowercase = identityDefaultOptions.PasswordRequireLowercase;
+                options.Password.RequiredUniqueChars = identityDefaultOptions.PasswordRequiredUniqueChars;
+
+                // Lockout settings
+                options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(identityDefaultOptions.LockoutDefaultLockoutTimeSpanInMinutes);
+                options.Lockout.MaxFailedAccessAttempts = identityDefaultOptions.LockoutMaxFailedAccessAttemps;
+                options.Lockout.AllowedForNewUsers = identityDefaultOptions.LockoutAllowedForNewUsers;
+
+                // User settings
+                options.User.RequireUniqueEmail = identityDefaultOptions.UserRequireUniqueEmail;
+
+                // email confirmation require
+                options.SignIn.RequireConfirmedEmail = identityDefaultOptions.SignInRequireConfirmedEmail;
+
+            }).AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+
+
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

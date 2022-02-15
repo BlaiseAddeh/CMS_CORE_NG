@@ -4,6 +4,8 @@ using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
+using DataService;
+using FunctionalService;
 using LoggingService;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -23,15 +25,20 @@ namespace CMS__CORE_NG
 
             using (var scope = host.Services.CreateScope())
             {
+                var services = scope.ServiceProvider;
                 try
                 {
-                    int zero = 0;
-                    int result = 100 / zero;
+                    var context = services.GetRequiredService<ApplicationDbContext>();
+                    var dpcontext = services.GetRequiredService<DataProtectionKeysContext>();
+                    var functionSvc = services.GetRequiredService<IFunctionalSvc>();
+
+                    DbContextInitializer.Initialize(dpcontext, context, functionSvc).Wait();
+
                 }
-                catch (DivideByZeroException ex)
+                catch (Exception ex)
                 {
-                    Log.Error("An error occured while seeding the database {Error} " +
-                        "{StackTrace} {InnerException} {Source}",
+                    Log.Error("An error occured while seeding the database " +
+                        "{Error} {StackTrace} {InnerException} {Source}",
                         ex.Message, ex.StackTrace, ex.InnerException, ex.Source);
                 }
             }

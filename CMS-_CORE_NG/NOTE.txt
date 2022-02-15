@@ -78,6 +78,87 @@ Il faut installer la meme version de Identity.EntityFrameworkCore que dans le Mo
 > dotnet add package Microsoft.AspNetCore.Identity.EntityFrameworkCore --version=5.0.1
 
 
+** Mise en place des script de migration
+
+1- Dans le Projet Api (CMS-_CORE_NG), Ajouter la reference au projet DataService
+2- Placer la chaine de connexion dans le fichier appsettings.json
+
+-----------
+ "ConnectionStrings": {
+    "CmsCorNg_DEV": "Server=localhost;Database=CmsCorNg_DEV;User=sa;Password=@zerty.123#;",
+    "DataProtectionKeysContext": "Server=.;Database=DataProtectionKeysContext;User=sa;Password=@zerty.123#;"
+  },
+-----------
+
+3- Ajouter des packages Nuget
+
+> dotnet add package Microsoft.EntityframeworkCore.Design --version=5.0.1
+> dotnet add package Microsoft.EntityframeworkCore.SqlServer --version=5.0.1
+> dotnet add package Microsoft.Extensions.DependencyInjection --version=6.0.0
+
+
+NB: L'appelle de la méthodes d'initialisation de la base de données se fait depuis
+    Program.cs
+
+------------
+
+public class Program
+    {
+        public static void Main(string[] args)
+        {
+            var host = CreateHostBuilder(args).Build();
+
+            using (var scope = host.Services.CreateScope())
+            {
+                var services = scope.ServiceProvider;
+                try
+                {
+                    var context = services.GetRequiredService<ApplicationDbContext>();
+                    var dpcontext = services.GetRequiredService<DataProtectionKeysContext>();
+                    var functionSvc = services.GetRequiredService<IFunctionalSvc>();
+
+                    DbContextInitializer.Initialize(dpcontext, context, functionSvc).Wait();
+
+                }
+                catch (Exception ex)
+                {
+                    .....
+                }
+            }
+
+            host.Run();
+        }
+
+------------
+
+ /*--------------------------------------------------------*/
+ /*               DB CONNECTION OPTIONS                    */
+ /*--------------------------------------------------------*/
+
+  ......
+
+ /*--------------------------------------------------------*/
+ /*                   Functional Service                   */
+ /*--------------------------------------------------------*/
+
+ .......
+
+ /*--------------------------------------------------------*/
+ /*                   Default Identity Options             */
+ /*--------------------------------------------------------*/
+
+ .......
+
+3 - Ouvrir le projet webApi dans le terminal
+
+> dotnet ef migrations add InitialCreate --context ApplicationDbContext
+> dotnet ef migrations add InitialCreate --context DataProtectionKeysContext
+
+NB: Les 02 Scripts ci dessus crée les dossier de migration mais pas les bases de données.
+
+Pour generer les bases de données, il faut exécuter l'application
+
+
 
 
 
