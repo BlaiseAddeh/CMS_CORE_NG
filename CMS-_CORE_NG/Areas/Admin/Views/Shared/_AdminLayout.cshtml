@@ -8,6 +8,10 @@
     <meta name="author" content="Techhowdy" />
     <!-- Favicon icon -->
     <link href="~/favicon.ico" icon="icon" />
+
+    @await Html.PartialAsync("_ApplicationHeaderStylesPartial")
+
+
     @RenderSection("Styles", required: false)
 </head>
 <body>
@@ -17,13 +21,21 @@
     <!-- ================================================== -->
 
     <div class="wrapper">
+
+        @await Html.PartialAsync("_SidebarLayout")
+
         <div id="content">
+
+            @await Html.PartialAsync("_TopbarLayout")
+
             @RenderBody()
         </div>
 
-        @await Html.PartialAsync("_FooterLayout")
-
     </div>
+
+    @await Html.PartialAsync("_FooterLayout")
+
+    @await Html.PartialAsync("_UIScriptsPartial")
 
     @RenderSection("Scripts", required: false)
 

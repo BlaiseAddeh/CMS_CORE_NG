@@ -1,0 +1,418 @@
+--------------------------------------------------------
+Timestamp - 3/8/2022 1:18:51 PM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 7280
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/8/2022 1:18:58 PM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 7280
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/8/2022 1:19:31 PM +01:00 | Level - Error|
+--------------------------------------------------------
+RequestId : "0HMG0VN5TLD0T:00000002"
+RequestPath : "/admin/"
+ConnectionId : "0HMG0VN5TLD0T"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 7280
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/8/2022 1:19:42 PM +01:00 | Level - Error|
+--------------------------------------------------------
+RequestId : "0HMG0VN5TLD11:00000004"
+RequestPath : "/Admin/home"
+ConnectionId : "0HMG0VN5TLD11"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 7280
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/8/2022 1:22:13 PM +01:00 | Level - Error|
+--------------------------------------------------------
+ActionId : "e2026a7d-d48e-471c-b331-6a5f72edebfd"
+ActionName : "CMS__CORE_NG.Areas.Admin.Controllers.AccountController.Login (CMS-_CORE_NG)"
+RequestId : "0HMG0VN5TLD11:0000000A"
+RequestPath : "/Admin/Account/Login"
+ConnectionId : "0HMG0VN5TLD11"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 7280
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/8/2022 1:22:13 PM +01:00 | Level - Error|
+--------------------------------------------------------
+ActionId : "e2026a7d-d48e-471c-b331-6a5f72edebfd"
+ActionName : "CMS__CORE_NG.Areas.Admin.Controllers.AccountController.Login (CMS-_CORE_NG)"
+RequestId : "0HMG0VN5TLD11:0000000A"
+RequestPath : "/Admin/Account/Login"
+ConnectionId : "0HMG0VN5TLD11"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 7280
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/8/2022 1:28:08 PM +01:00 | Level - Error|
+--------------------------------------------------------
+ActionId : "e2026a7d-d48e-471c-b331-6a5f72edebfd"
+ActionName : "CMS__CORE_NG.Areas.Admin.Controllers.AccountController.Login (CMS-_CORE_NG)"
+RequestId : "0HMG0VN5TLD13:00000002"
+RequestPath : "/Admin/Account/Login"
+ConnectionId : "0HMG0VN5TLD13"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 7280
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/8/2022 1:28:08 PM +01:00 | Level - Error|
+--------------------------------------------------------
+ActionId : "e2026a7d-d48e-471c-b331-6a5f72edebfd"
+ActionName : "CMS__CORE_NG.Areas.Admin.Controllers.AccountController.Login (CMS-_CORE_NG)"
+RequestId : "0HMG0VN5TLD13:00000002"
+RequestPath : "/Admin/Account/Login"
+ConnectionId : "0HMG0VN5TLD13"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 7280
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/8/2022 1:28:59 PM +01:00 | Level - Error|
+--------------------------------------------------------
+elapsed : "17"
+parameters : "@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 450), @p7='?' (Size = 4000)"
+commandType : Text
+commandTimeout : 30
+newLine : "
+"
+commandText : "SET NOCOUNT ON;
+INSERT INTO [Tokens] ([ClientId], [CreatedDate], [EncryptionKeyJwt], [EncryptionKeyRt], [ExpiryTime], [LastModifiedDate], [UserId], [Value])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT [Id]
+FROM [Tokens]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();"
+EventId : { Id: 20102, Name: "Microsoft.EntityFrameworkCore.Database.Command.CommandError" }
+SourceContext : "Microsoft.EntityFrameworkCore.Database.Command"
+ActionId : "e2026a7d-d48e-471c-b331-6a5f72edebfd"
+ActionName : "CMS__CORE_NG.Areas.Admin.Controllers.AccountController.Login (CMS-_CORE_NG)"
+RequestId : "0HMG0VN5TLD14:00000002"
+RequestPath : "/Admin/Account/Login"
+ConnectionId : "0HMG0VN5TLD14"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 7280
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/8/2022 1:28:59 PM +01:00 | Level - Error|
+--------------------------------------------------------
+contextType : "DataService.ApplicationDbContext"
+newline : "
+"
+error : "Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'LastModifiedDate', table 'CmsCorNg_DEV.dbo.Tokens'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:5b23d33d-aa39-421e-b469-a03b63dd6bc5
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)"
+EventId : { Id: 10000, Name: "Microsoft.EntityFrameworkCore.Update.SaveChangesFailed" }
+SourceContext : "Microsoft.EntityFrameworkCore.Update"
+ActionId : "e2026a7d-d48e-471c-b331-6a5f72edebfd"
+ActionName : "CMS__CORE_NG.Areas.Admin.Controllers.AccountController.Login (CMS-_CORE_NG)"
+RequestId : "0HMG0VN5TLD14:00000002"
+RequestPath : "/Admin/Account/Login"
+ConnectionId : "0HMG0VN5TLD14"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 7280
+ProcessName : "dotnet"
+-----------------------EXCEPTION DETAILS --------------
+Exception - Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'LastModifiedDate', table 'CmsCorNg_DEV.dbo.Tokens'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:5b23d33d-aa39-421e-b469-a03b63dd6bc5
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)StackTrace -    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)Message - An error occurred while updating the entries. See the inner exception for details.Source - Microsoft.EntityFrameworkCore.RelationalInnerException - Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'LastModifiedDate', table 'CmsCorNg_DEV.dbo.Tokens'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:5b23d33d-aa39-421e-b469-a03b63dd6bc5
+Error Number:515,State:2,Class:16--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/8/2022 1:28:59 PM +01:00 | Level - Error|
+--------------------------------------------------------
+ActionId : "e2026a7d-d48e-471c-b331-6a5f72edebfd"
+ActionName : "CMS__CORE_NG.Areas.Admin.Controllers.AccountController.Login (CMS-_CORE_NG)"
+RequestId : "0HMG0VN5TLD14:00000002"
+RequestPath : "/Admin/Account/Login"
+ConnectionId : "0HMG0VN5TLD14"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 7280
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/8/2022 1:50:02 PM +01:00 | Level - Error|
+--------------------------------------------------------
+elapsed : "25"
+parameters : "@p0='?' (Size = 4000), @p1='?' (DbType = DateTime2), @p2='?' (Size = 4000), @p3='?' (Size = 4000), @p4='?' (DbType = DateTime2), @p5='?' (Size = 4000), @p6='?' (Size = 450), @p7='?' (Size = 4000)"
+commandType : Text
+commandTimeout : 30
+newLine : "
+"
+commandText : "SET NOCOUNT ON;
+INSERT INTO [Tokens] ([ClientId], [CreatedDate], [EncryptionKeyJwt], [EncryptionKeyRt], [ExpiryTime], [LastModifiedDate], [UserId], [Value])
+VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT [Id]
+FROM [Tokens]
+WHERE @@ROWCOUNT = 1 AND [Id] = scope_identity();"
+EventId : { Id: 20102, Name: "Microsoft.EntityFrameworkCore.Database.Command.CommandError" }
+SourceContext : "Microsoft.EntityFrameworkCore.Database.Command"
+ActionId : "e2026a7d-d48e-471c-b331-6a5f72edebfd"
+ActionName : "CMS__CORE_NG.Areas.Admin.Controllers.AccountController.Login (CMS-_CORE_NG)"
+RequestId : "0HMG0VN5TLD15:00000004"
+RequestPath : "/Admin/Account/Login"
+ConnectionId : "0HMG0VN5TLD15"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 7280
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/8/2022 1:50:02 PM +01:00 | Level - Error|
+--------------------------------------------------------
+contextType : "DataService.ApplicationDbContext"
+newline : "
+"
+error : "Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'LastModifiedDate', table 'CmsCorNg_DEV.dbo.Tokens'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:827e897a-3ae5-4ff6-9a19-ef4e5ea4bb14
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)"
+EventId : { Id: 10000, Name: "Microsoft.EntityFrameworkCore.Update.SaveChangesFailed" }
+SourceContext : "Microsoft.EntityFrameworkCore.Update"
+ActionId : "e2026a7d-d48e-471c-b331-6a5f72edebfd"
+ActionName : "CMS__CORE_NG.Areas.Admin.Controllers.AccountController.Login (CMS-_CORE_NG)"
+RequestId : "0HMG0VN5TLD15:00000004"
+RequestPath : "/Admin/Account/Login"
+ConnectionId : "0HMG0VN5TLD15"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 7280
+ProcessName : "dotnet"
+-----------------------EXCEPTION DETAILS --------------
+Exception - Microsoft.EntityFrameworkCore.DbUpdateException: An error occurred while updating the entries. See the inner exception for details.
+ ---> Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'LastModifiedDate', table 'CmsCorNg_DEV.dbo.Tokens'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:827e897a-3ae5-4ff6-9a19-ef4e5ea4bb14
+Error Number:515,State:2,Class:16
+   --- End of inner exception stack trace ---
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)StackTrace -    at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.Internal.BatchExecutor.ExecuteAsync(IEnumerable`1 commandBatches, IRelationalConnection connection, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(IList`1 entriesToSave, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.ChangeTracking.Internal.StateManager.SaveChangesAsync(DbContext _, Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.SqlServer.Storage.Internal.SqlServerExecutionStrategy.ExecuteAsync[TState,TResult](TState state, Func`4 operation, Func`4 verifySucceeded, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.DbContext.SaveChangesAsync(Boolean acceptAllChangesOnSuccess, CancellationToken cancellationToken)Message - An error occurred while updating the entries. See the inner exception for details.Source - Microsoft.EntityFrameworkCore.RelationalInnerException - Microsoft.Data.SqlClient.SqlException (0x80131904): Cannot insert the value NULL into column 'LastModifiedDate', table 'CmsCorNg_DEV.dbo.Tokens'; column does not allow nulls. INSERT fails.
+The statement has been terminated.
+   at Microsoft.Data.SqlClient.SqlCommand.<>c.<ExecuteDbDataReaderAsync>b__169_0(Task`1 result)
+   at System.Threading.Tasks.ContinuationResultTaskFromResultTask`2.InnerInvoke()
+   at System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Storage.RelationalCommand.ExecuteReaderAsync(RelationalCommandParameterObject parameterObject, CancellationToken cancellationToken)
+   at Microsoft.EntityFrameworkCore.Update.ReaderModificationCommandBatch.ExecuteAsync(IRelationalConnection connection, CancellationToken cancellationToken)
+ClientConnectionId:827e897a-3ae5-4ff6-9a19-ef4e5ea4bb14
+Error Number:515,State:2,Class:16--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/8/2022 4:13:17 PM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 7489
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/8/2022 4:13:25 PM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 7489
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/8/2022 4:28:51 PM +01:00 | Level - Error|
+--------------------------------------------------------
+RequestId : "0HMG12OL468B2:00000002"
+RequestPath : "/Admin"
+ConnectionId : "0HMG12OL468B2"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 7489
+ProcessName : "dotnet"
+--------------------------------------------------------

@@ -1,0 +1,129 @@
+--------------------------------------------------------
+Timestamp - 3/9/2022 4:09:51 AM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 8147
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/9/2022 4:09:59 AM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 8147
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/9/2022 4:11:02 AM +01:00 | Level - Error|
+--------------------------------------------------------
+ActionId : "30480aaa-2c95-4011-bb5c-62919ef20d35"
+ActionName : "CMS__CORE_NG.Areas.Admin.Controllers.AccountController.Login (CMS-_CORE_NG)"
+RequestId : "0HMG1F92FOT96:00000005"
+RequestPath : "/Admin/Account/Login"
+ConnectionId : "0HMG1F92FOT96"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 8147
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/9/2022 4:16:20 AM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 8184
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/9/2022 4:16:43 AM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 8184
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/9/2022 4:16:53 AM +01:00 | Level - Error|
+--------------------------------------------------------
+ActionId : "21d4d14e-4275-4fe4-a2bf-8d439fa87fec"
+ActionName : "CMS__CORE_NG.Areas.Admin.Controllers.AccountController.Login (CMS-_CORE_NG)"
+RequestId : "0HMG1FCMEI350:00000002"
+RequestPath : "/Admin/Account/Login"
+ConnectionId : "0HMG1FCMEI350"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 8184
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/9/2022 4:22:39 AM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 8237
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/9/2022 4:22:46 AM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 8237
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/9/2022 4:24:38 AM +01:00 | Level - Error|
+--------------------------------------------------------
+ActionId : "71f78441-ed58-4327-8e3c-cada7c968ba5"
+ActionName : "CMS__CORE_NG.Areas.Admin.Controllers.AccountController.Login (CMS-_CORE_NG)"
+RequestId : "0HMG1FG7CF7AR:00000003"
+RequestPath : "/Admin/Account/Login"
+ConnectionId : "0HMG1FG7CF7AR"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 8237
+ProcessName : "dotnet"
+--------------------------------------------------------

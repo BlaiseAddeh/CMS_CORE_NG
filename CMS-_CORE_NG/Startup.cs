@@ -1,9 +1,16 @@
 ﻿using System;
+using System.Text;
+using ActivityService;
+using AuthService;
+using CookieService;
 using DataService;
+using FiltersService;
 using FunctionalService;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.DataProtection;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.SpaServices.AngularCli;
@@ -11,6 +18,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using ModelService;
 
 namespace CMS__CORE_NG
@@ -88,6 +96,67 @@ namespace CMS__CORE_NG
 
             }).AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
+
+            /*--------------------  AJOUT DES SERVICES -----*/
+
+            // **** A°) IDataProtection Service : Permet le cryptage des donnees
+
+            var dataProtectionSection = Configuration.GetSection("DataProtectionKeys"); // DataProtectionKeys se trouvant dans appsettings.json
+            services.Configure<DataProtectionKeys>(dataProtectionSection);
+            services.AddDataProtection().PersistKeysToDbContext<DataProtectionKeysContext>(); // Précise la clé pour une base de données précise
+
+
+            // **** B°) AppSettings Service
+
+            var appSettingsSection = Configuration.GetSection("AppSettings");
+            services.Configure<AppSettings>(appSettingsSection);
+
+            // **** C°) JWT AJUTHENTICATION SERVICE
+
+            var appSettings = appSettingsSection.Get<AppSettings>();
+            var key = Encoding.ASCII.GetBytes(appSettings.Secret);
+            services.AddAuthentication(o =>
+            {
+                o.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+                o.DefaultSignInScheme = JwtBearerDefaults.AuthenticationScheme;
+                o.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+            }).AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, options =>
+            {
+                options.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = appSettings.ValidateIssuerSigningKey,
+                    ValidateIssuer = appSettings.ValidateIssuer,
+                    ValidateAudience = appSettings.ValidateAudience,
+                    ValidIssuer = appSettings.Site,
+                    ValidAudience = appSettings.Audience,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ClockSkew = TimeSpan.Zero // Annule le temps par défaut du token à sa création (qui est de 5 min par défaut) et donc le fixe à 0
+                };
+            });
+
+            // **** D°) Service d'authentification. AddTransient => A chaque nvlle requete , on instancie le service
+            services.AddTransient<IAuthSvc, AuthSvc>();
+
+            // **** E°) Service de suivi des Activité de l'utilisateur dans l'application
+            services.AddTransient<IActivitySvc, ActivitySvc>();
+
+            // **** F°) Ajouter les services de gestion des cookies en première position
+
+            services.AddHttpContextAccessor();
+            services.AddTransient<CookieOptions>();
+            services.AddTransient<ICookieSvc, CookieSvc>();
+
+
+
+            // **** G°) Service d'authentification des schemas. Le schema "Administrator" est indiqué car
+            //    car requis pour le controller Home dans Areas/Admin
+
+            services.AddAuthentication("Administrator")
+                .AddScheme<AdminAuthenticationOptions, AdminAuthenticationHandler>("Admin", null);
+
+            /*-----------------------  FIN AJOUT DES SERVICES -----*/
+
+
             /*--Permet de faire des modification et de les visualiser par simple rafraichissement de la page sans redémarrer l'application-*/
 
             services.AddMvc().AddControllersAsServices()
@@ -118,6 +187,7 @@ namespace CMS__CORE_NG
             }
 
             app.UseRouting();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

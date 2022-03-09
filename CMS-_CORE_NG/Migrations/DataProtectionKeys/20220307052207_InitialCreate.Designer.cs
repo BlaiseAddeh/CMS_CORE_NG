@@ -9,7 +9,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CMS__CORE_NG.Migrations.DataProtectionKeys
 {
     [DbContext(typeof(DataProtectionKeysContext))]
-    [Migration("20220215135726_InitialCreate")]
+    [Migration("20220307052207_InitialCreate")]
     partial class InitialCreate
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)

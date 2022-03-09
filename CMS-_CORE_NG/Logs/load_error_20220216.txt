@@ -1,0 +1,78 @@
+--------------------------------------------------------
+Timestamp - 2/16/2022 11:06:21 AM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.13"
+UserName : "addehblaise"
+ProcessId : 1109
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 2/16/2022 11:06:29 AM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.13"
+UserName : "addehblaise"
+ProcessId : 1109
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 2/16/2022 11:54:31 AM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.13"
+UserName : "addehblaise"
+ProcessId : 1258
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 2/16/2022 11:54:39 AM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.13"
+UserName : "addehblaise"
+ProcessId : 1258
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 2/16/2022 11:59:05 AM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.13"
+UserName : "addehblaise"
+ProcessId : 1306
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 2/16/2022 11:59:12 AM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.13"
+UserName : "addehblaise"
+ProcessId : 1306
+ProcessName : "dotnet"
+--------------------------------------------------------

@@ -95,6 +95,7 @@ Il faut installer la meme version de Identity.EntityFrameworkCore que dans le Mo
 > dotnet add package Microsoft.EntityframeworkCore.Design --version=5.0.1
 > dotnet add package Microsoft.EntityframeworkCore.SqlServer --version=5.0.1
 > dotnet add package Microsoft.Extensions.DependencyInjection --version=6.0.0
+> dotnet add package Microsoft.AspNetCore.Authentication.JwtBearer --version=5.0.0
 
 
 NB: L'appelle de la méthodes d'initialisation de la base de données se fait depuis
@@ -154,7 +155,11 @@ public class Program
 > dotnet ef migrations add InitialCreate --context ApplicationDbContext
 > dotnet ef migrations add InitialCreate --context DataProtectionKeysContext
 
-NB: Les 02 Scripts ci dessus crée les dossier de migration mais pas les bases de données.
+NB1: Supprimer les tables via la requete suivante:
+     DROP DATABASE DataProtectionKeysContext
+     DROP DATABASE CmsCorNg_DEV
+
+NB2: Les 02 Scripts ci dessus crée les dossier de migration mais pas les bases de données.
 
 Pour generer les bases de données, il faut exécuter l'application
 
@@ -202,8 +207,142 @@ NB: Dans Startup.cs
         .SetCompatibilityVersion(CompatibilityVersion.Version_3_0);
 
 
+*** Adding Client side Libraries for Admin Panel using Microsoft Libman
 
- 
+Pour les applications backend on utilise libman pour l'installation des librairies
+Pour installer libman de manière gblobale sur mon poste
+Depuis l'invite de commande saisir le script suivant:
+
+> dotnet tool install --global Microsoft.web.LibraryManager.Cli
+
++ Inclure le fichier libman.json dans le projet en faisant:
+   - Clic droit sur le projet
+   - Manage Client-Side Libraries...
+
+Dans le fichier, charger les librairies dans cet ordre (voir libman.json)
+
+***** Adding FontAwesome icons
+
+**** BUNDLING & MINIFICATION
+Pour faire de la minification, il faut faire l'importation du nuget:
+BuildBundlerMinifier
+
+1-Dans le projet WebApi
+
+<PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
+
+2- Dans mon projet, mettre le fichier suivant: bundleconfig.json
+
+3- Dans le fichier, mettre les objet de type:
+
+ {
+    "outputFileName": "wwwroot/lib/custom/js/admin/admin.min.js",
+    "inputFiles": [
+      "wwwroot/lib/custom/js/admin/admin.js"
+    ]
+  }
+
+4- Pendant le process de Minification des fichiers js, des fichiers de type .map sont créés, pour ne pas en créer
+ (car encombrant, il faut configurer:
+
+"sourceMap": false
+
+5- Il faut simplement regenerer le projet pour voir les fichiers minifiés créés.
+
+
+**** Adding Login View To Admin Panel
+Pour la notification on utilise SweetAlert que nous telechargement à partir de la configuration dans libman
+
+Nous plaçons donc cette portion dans libman
+-----
+{
+   "library": "limonte-sweetalert2@10.15.5",
+   "destination": "wwwroot/lib/limonte-sweetalert2"
+ }
+----
+
+Dans le fichier dans lequel on veut voir la notification, il faut mettre le chemin du fichier sweetalert
+
+
+@section Styles {
+    <link href="~/lib/limonte-sweetalert2/sweetalert2.min.css" rel="stylesheet"/>
+}
+
+@section Scripts {
+    <script src="~/lib/limonte-sweetalert2/sweetalert2.min.js"></script> 
+}
+
+
+***** CREATING ADMIN AUTHENTICATION HANDLER
+
+1- Pour proteger un controller, placer [Authorize] tout juste au dessus de la classe du Controller
+NB: [Authorize] peut aussi servir à protéger les méthodes d'action du controller
+2- Dans le fichier Startup, dans la methode Configure, il faut placer le middlware
+    app.UseAuthorization()
+NB: Placer app.UseAuthorization() tout juste après app.UseRouting()
+
+3- N'authoriser qu'un certain type de schema a accéder à un controller, on utilise
+AuthenticationSchemes. Comme ci après:
+[Authorize(AuthenticationSchemes="Admin")]
+
+4- Création du schema d'authentification c.a.d AuthenticationSchemes
+
+Dans notre cas, nous créons un nouveau projet de classe contenant les Schemas d'authentification
+Le projet de classe de nomme FiltersService
+
+* Dans le projet FiltersService:
+
+> dotnet add package Microsoft.AspNetCore.Authentication
+> dotnet add package Microsoft.AspNetCore.Mvc.Abstractions
+> dotnet add package Microsoft.IdentityModel.Tokens
+> dotnet add package System.IdentityModel.Tokens.Jwt
+> 
+
+- Ajouter la reference au projet ModelService et DataService
+$$$$$$$$
+Dans le projet ModelService, on a la creation de 02 classes sensées contenir les variables de configuration et les methodes de
+cryptage et de decryptage des tokens: AppSettings et DataProtectionKeys
+$$$$$$$$
+
+
+
+- Ajouter la classe AdminAuthenticationHandler.cs
+
+***** CREATION DU SERVICE CHARGÉ DE LA GESTION
+      DU TRACAGE DES ACTIVITES DES UTILISATEURS (ActivityService)
+Quand l'utilisateur s'est connecté ou déconnecté - les echecs des actions
+
+- Ajouter la reference au projets DataService et LoggingService
+- Ajouter une nouvelle entité ActivityModel dans le projet ModelService
+- Ajouter l'entité ActivityModel dans ApplicationDbContext.cs
+
+
+
+***** CREATION DU SERVICE D'AUTHENTIFICATION (AuthService)
+1) C'est une nouvelle bibliothèque de classe
+2) Les packages à installer sont:
+
+> dotnet add package Microsoft.IdentityModel.Tokens --version=6.7.1
+> dotnet add package System.IdentityModel.Tokens.Jwt
+
+3) References à ajouter dans ce projet:
+ModelService - LoggingService
+ - DataService (Utile à l'acces à la base de données)
+
+***** CREATION DU SERVICE CHARGÉ DE LA GESTION
+      DES COOKIES DE L'APPLICATION (CookieService)
+
+Responsabilité: Fetch cookie - delete cookie - Create cookie
+
+* Ajouter la reference au projet LoggingService
+
+> dotnet add package Microsoft.AspNetCore.Http
+> dotnet add package Newtonsoft.json
+
+
+
+
+
 
 
 

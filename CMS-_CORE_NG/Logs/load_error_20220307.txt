@@ -1,0 +1,153 @@
+--------------------------------------------------------
+Timestamp - 3/7/2022 6:26:50 AM +01:00 | Level - Warning|
+--------------------------------------------------------
+KeyId : cedf6926-95a0-4c8c-b91d-262cad322a4a
+EventId : { Id: 35, Name: "NoXMLEncryptorConfiguredKeyMayBePersistedToStorageInUnencryptedForm" }
+SourceContext : "Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 4407
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/7/2022 6:26:55 AM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 4407
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/7/2022 6:27:02 AM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 4407
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/7/2022 6:30:53 AM +01:00 | Level - Warning|
+--------------------------------------------------------
+KeyId : 9bb89a94-3c74-4a86-9a3f-4b32af87d89a
+EventId : { Id: 35, Name: "NoXMLEncryptorConfiguredKeyMayBePersistedToStorageInUnencryptedForm" }
+SourceContext : "Microsoft.AspNetCore.DataProtection.KeyManagement.XmlKeyManager"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 4426
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/7/2022 6:30:57 AM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 4426
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/7/2022 6:31:05 AM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 4426
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/7/2022 11:40:52 AM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 4907
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/7/2022 11:41:00 AM +01:00 | Level - Error|
+--------------------------------------------------------
+SourceContext : "Microsoft.AspNetCore.SpaServices"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 4907
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/7/2022 11:42:00 AM +01:00 | Level - Error|
+--------------------------------------------------------
+RequestId : "0HMG04ROPCSC2:00000006"
+RequestPath : "/admin/"
+ConnectionId : "0HMG04ROPCSC2"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 4907
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/7/2022 11:42:06 AM +01:00 | Level - Error|
+--------------------------------------------------------
+RequestId : "0HMG04ROPCSC8:00000002"
+RequestPath : "/admin/"
+ConnectionId : "0HMG04ROPCSC8"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 4907
+ProcessName : "dotnet"
+--------------------------------------------------------
+--------------------------------------------------------
+Timestamp - 3/7/2022 11:43:22 AM +01:00 | Level - Error|
+--------------------------------------------------------
+RequestId : "0HMG04ROPCSCA:00000002"
+RequestPath : "/admin/"
+ConnectionId : "0HMG04ROPCSCA"
+Application : "CMS_CORE_NG"
+MachineName : "MacBook-Pro-de-ADDEH"
+CurrentManagedThreadId : 1
+OSVersion : "Unix 12.0.1"
+Version : "5.0.14"
+UserName : "addehblaise"
+ProcessId : 4907
+ProcessName : "dotnet"
+--------------------------------------------------------
